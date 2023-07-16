@@ -1,0 +1,142 @@
+DevOps :-  Its a combination of  ur development team plus ur Operations team
+
+Dev team :- java,.net,python,ruby,groovy...etc....
+Ops team :- Integration , deployment , storage etc .. ( jenkins, ansible , maven ,tomcat ... )
+
+Note:- Its not a tool, Its a Platform where serveral tools will come togeather to perfrom individual tasks.. 
+
+Linux -- Completed 
+
+
+GIT 
+
+git init 
+git status 
+Create files 
+git status
+git add ./*
+git commit -m "commited msg"
+git log 
+git push 
+git pull 
+
+git reset              ( index to working ) 
+git reset --soft cid   ( local to index )
+git reset --mixed cid  ( local to working  ) 
+
+git stash save 
+
+Maven : -- Its a buld tool , used to build the code 
+
+Note:- Pre-requiste to run Maven is "Java" ( jdk-1.8.0") 
+
+Repositories of Maven=3 
+
+1) local repo    :- when u install maven in ur machine a repository will be generate in ur machine  ( c:/users/.m2 ) 
+2) Central repo  :- It is maintained by ur Apache , ( repo1.maven.org ) 
+3) Remote repo   :- Its a 3rd party vendors which will give u the plugiun as per the request.....
+
+
+Note:- The repositories will contain help plugins , which will help us to build the code....
+
+Phases of Maven = 
+
+1) Clean    --- it will be used to wipeout the previous files updated on the workspace 
+2) Install  --- the entire code will be build with this " install " command 
+3) Test     --- used to test the code / artifacts 
+4) Package  --- once the code is build and tested ,it will store in the form of a package ( .war , .jar )
+
+
+
+
+Artifacts :- After building the code we will be getting the output , this out is called as Artifacts
+
+2types :- 1) .war -- web archive file  -- will be deployed in " Tomcat Servers "
+          2) .jar -- java archine file -- will be deployed in JBoss , Weblogic , Glassfish etc.... 
+		  
+		  
+================================================================================
+
+Tomcat;---
+
+
+============================================================================
+
+Prometheus and Grafana :-
+
+Practicals done 
+
+
+
+===========================================================================
+
+Jenkins :-
+
+Installation 
+Manage Jenkins Discription 
+Creating Users and Assigining Permissions
+Create a New Sample Job and do CI-CD  
+Automation Jobs 
+
+============================================================================
+Docker
+
+FROM tomcat:8.0
+LABLE maintainer="deepakwebinar1@gmail.com"
+CMD ["catalina.sh","run"]
+
+From openjdk:latest
+MAINTAINER deepak info@webinar.com
+LABEL env=production
+ENV apparea /data/app
+Run mkdir -p $apparea
+ADD ./gitbucket.war $apparea
+WORKDIR $apparea
+CMD ["java","-jar","gitbucket.war"]
+
+
+
+=================================================================================
+
+Ansible :- 
+
+Installation 
+SSH 
+Hosts 
+Roles 
+Project 
+
+=================================================================================
+
+Sonarqube:- 
+
+Installation
+Sample Project Code Testing
+Integration with Jenkins
+
+================================================================================
+
+
+
+
+
+https://www.youtube.com/watch?v=gvIsaPhuYtE    ============ DevOps Interview Questions
+
+
+
+
+
+==================================================================================
+dotnet new sln -o HelloWorldApp
+
+cd HelloWorldApp
+
+dotnet new mvc -n HelloWorldApp.Web
+
+dotnet sln HelloWorldApp.sln add HelloWorldApp.Web\HelloWorldApp.Web.csproj
+
+dotnet restore 
+
+dotnet build --no-restore --configuration release
+
+dotnet publish --no-build --configuration release
